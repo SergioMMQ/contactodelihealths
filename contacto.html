@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Directorio de Contactos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+  <header class="bg-blue-600 text-white shadow p-6 text-center" style="background: center;background-image: url(IMAGEN\ PRINCIPAL\ VACUNAS.webp);">
+    <img src="/Logo Blanco copy 6-1 2.png" alt="logodelihealths" style="width: 150px;justify-self: anchor-center;"/>
+    <h1 class="text-3xl font-bold">Directorio de Contactos</h1>
+    <p class="mt-2">Áreas responsables para dar seguimiento</p>
+  </header>
+
+  <!-- 🔔 NOTIFICACIÓN PUSH -->
+  <div id="notification" class="fixed top-5 right-5 bg-white shadow-xl border-l-4 border-red-600 rounded-lg p-4 w-80 z-50 flex items-start space-x-3 animate-slide-in">
+    <div class="flex-1">
+      <h3 class="text-red-700 font-semibold">Aviso Importante</h3>
+      <p class="text-gray-700 text-sm mt-1">
+        Si tienes dudas sobre a quién contactar, comunícate con el área de <strong>Recursos Humanos</strong>.
+      </p>
+    </div>
+    <button id="closeBtn" class="text-gray-500 hover:text-gray-800 font-bold ml-2">✕</button>
+  </div>
+
+  <style>
+    @keyframes slide-in {
+      from { transform: translateX(120%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .animate-slide-in {
+      animation: slide-in 0.6s ease-out;
+    }
+  </style>
+
+  <section>
+    <div class="bg-white shadow-md rounded-lg max-w-4xl mx-auto my-8 p-6">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Instrucciones para Contactar</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li class="text-red-800 font-bold">Si no sabes a quién contactar, siempre pregunta al área de RH.</li>
+        <li>Selecciona el área correspondiente a tu consulta o problema.</li>
+        <li>Contacta al responsable mediante el correo electrónico o número de teléfono proporcionado.</li>
+        <li>Describe claramente tu situación para recibir una asistencia adecuada.</li>
+        <li>Si no recibes respuesta en un plazo razonable, intenta contactar a otro miembro del equipo.</li>
+      </ul>
+    </div>
+  </section>
+
+  <main class="max-w-5xl mx-auto py-10 px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+    <div class="space-y-7">
+      <div class="text-xl font-bold text-green-700">RECURSOS HUMANOS</div>
+
+      <!-- RH -->
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition">
+        <h2 class="text-xl font-bold text-green-700">Gerente RH</h2>
+        <p class="mt-2 text-gray-700">Jessica Ramirez Renteri</p>
+        <p class="text-gray-600"><a href="mailto:jramirez@delihealths.com.mx" class="text-blue-600 hover:underline">jramirez@delihealths.com.mx</a></p>
+        <p class="text-gray-600">Tel: +52 55 1234 5678</p>
+        <a href="https://wa.me/525512345678?text=Hola%2C%20me%20comunico%20desde%20el%20Directorio%20de%20Delihealths." 
+           target="_blank" 
+           class="inline-block mt-3 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">
+          💬 WhatsApp
+        </a>
+      </div>
+
+      <!-- RH Auxiliar-->
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition">
+        <h2 class="text-xl font-bold text-green-700">Auxiliar RH</h2>
+        <p class="mt-2 text-gray-700">Estefania Gervacio Ledezma</p>
+        <p class="text-gray-600"><a href="mailto:egervacio@delihealths.com.mx" class="text-blue-600 hover:underline">egervacio@delihealths.com.mx</a></p>
+        <p class="text-gray-600">Tel: +52 55 1234 5678</p>
+        <a href="https://wa.me/525512345678?text=Hola%2C%20me%20comunico%20desde%20el%20Directorio%20de%20Delihealths." 
+           target="_blank" 
+           class="inline-block mt-3 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">
+          💬 WhatsApp
+        </a>
+      </div>   
+    </div> 
+
+    <div class="space-y-7">
+      <div class="text-xl font-bold text-black-700">SALUD OCUPACIONAL</div>
+
+      <!-- SO -->
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition">
+        <h2 class="text-xl font-bold text-black-700">Gerencia Salud Ocupacional</h2>
+        <p class="mt-2 text-gray-700">Felipe Gordillo Andrade</p>
+        <p class="text-gray-600"><a href="mailto:lfgordillo@delihealths.com.mx" class="text-blue-600 hover:underline">lfgordillo@delihealths.com.mx</a></p>
+        <p class="text-gray-600">Tel: +52 55 1122 3344</p>
+        <a href="https://wa.me/525511223344?text=Hola%2C%20me%20comunico%20desde%20el%20Directorio%20de%20Delihealths." 
+           target="_blank" 
+           class="inline-block mt-3 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">
+          💬 WhatsApp
+        </a>
+      </div>
+
+      <!-- SO Coordinador -->
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition">
+        <h2 class="text-xl font-bold text-black-700">Coordinador Salud Ocupacional</h2>
+        <p class="mt-2 text-gray-700">Ana Judith Romero Balcazar</p>
+        <p class="text-gray-600"><a href="mailto:aromero@delihealths.com.mx" class="text-blue-600 hover:underline">aromero@delihealths.com.mx</a></p>
+        <p class="text-gray-600">Tel: +52 55 5566 7788</p>
+        <a href="https://wa.me/525555667788?text=Hola%2C%20me%20comunico%20desde%20el%20Directorio%20de%20Delihealths." 
+           target="_blank" 
+           class="inline-block mt-3 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">
+          💬 WhatsApp
+        </a>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition">
+        <h2 class="text-xl font-bold text-black-700">Salud Ocupacional</h2>
+        <p class="mt-2 text-gray-700">Maria Fernanda Biosca Gleason</p>
+        <p class="text-gray-600"><a href="mailto:mbiosca@delihealths.com.mx" class="text-blue-600 hover:underline">mbiosca@delihealths.com.mx</a></p>
+        <p class="text-gray-600">Tel: +52 55 5566 7788</p>
+        <a href="https://wa.me/525555667788?text=Hola%2C%20me%20comunico%20desde%20el%20Directorio%20de%20Delihealths." 
+           target="_blank" 
+           class="inline-block mt-3 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">
+          💬 WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="space-y-7">
+      <div class="text-xl font-bold text-blue-700">SISTEMAS</div>
+
+      <!-- TI -->
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition">
+        <h2 class="text-xl font-bold text-blue-700">Coordinador TI</h2>
+        <p class="mt-2 text-gray-700">Sergio Martinez Meneses</p>
+        <p class="text-gray-600"><a href="mailto:it@delihealths.com.mx" class="text-blue-600 hover:underline">it@delihealths.com.mx</a></p>
+        <p class="text-gray-600">Tel: +52 55 5053 8743</p>
+        <a href="https://wa.me/525550538743?text=Hola%2C%20me%20comunico%20desde%20el%20Directorio%20de%20Delihealths." 
+           target="_blank" 
+           class="inline-block mt-3 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">
+          💬 WhatsApp
+        </a>
+      </div>
+
+      <!-- Soporte TI -->
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition">
+        <h2 class="text-xl font-bold text-blue-700">Soporte TI</h2>
+        <p class="mt-2 text-gray-700">Ingrid Paulina Castillo Perez</p>
+        <p class="text-gray-600"><a href="mailto:pcastillo@delihealths.com.mx" class="text-blue-600 hover:underline">pcastillo@delihealths.com.mx</a></p>
+        <p class="text-gray-600">Tel: +52 55 3906 0953</p>
+        <a href="https://wa.me/525539060953?text=Hola%2C%20me%20comunico%20desde%20el%20Directorio%20de%20Delihealths." 
+           target="_blank" 
+           class="inline-block mt-3 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">
+          💬 WhatsApp
+        </a>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition">
+        <a href="https://forms.monday.com/forms/44e79a76f985683da8a018b61886c051?r=use1" class="text-blue-600 font-semibold hover:underline">CONTACTA SOPORTE TI</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-200 text-center py-4 mt-10 text-gray-700">
+    © 2025 Delihealths — Todos los derechos reservados
+  </footer>
+
+  <script>
+    // Cerrar notificación
+    document.getElementById('closeBtn').addEventListener('click', () => {
+      const notification = document.getElementById('notification');
+      notification.style.opacity = '0';
+      notification.style.transition = 'opacity 0.4s';
+      setTimeout(() => notification.remove(), 400);
+    });
+  </script>
+</body>
+</html>
