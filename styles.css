@@ -14,7 +14,7 @@ body {
 
 header {
   background-color: #004aad;
-  background-image: url("IMAGEN PRINCIPAL VACUNAS.webp");
+  background-image: url("PORTADACONTACTOSDELIHEALTHS-ESTAFETA.png");
   background-size: cover;
   background-position: center;
   color: white;
@@ -24,7 +24,7 @@ header {
 }
 
 header img {
-  width: 150px;
+  width: 200px;
 }
 
 header h1 {
@@ -148,9 +148,12 @@ main {
 }
 
 .card h2 {
+  display: flex;
+  height: 60px;
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 6px;
+  align-items: center;
 }
 
 .card p {
@@ -229,6 +232,7 @@ main {
 }
 
 .tab-container:hover .tab ul {
+  padding-top: 10px;
   background-color: #082d50;
   width: 200px;
   display: block;
