@@ -7,7 +7,7 @@
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f9fafb;
+  background-color: #f2f9ff;
   color: #333;
   line-height: 1.6;
 }
@@ -187,20 +187,20 @@ main {
 
 /* ==== PESTAÑA LATERAL ==== */
 .tab-container {
-  width: 200px;
-  height: 10px;
-  position: absolute;
-  top: 110px;
-  right: -80px;
-  margin: 0;
-  padding: 0;
-  transform: rotate(-0.25turn);
-  display: inline-block;
-  font-weight: 600;
+    width: 210px;
+    height: 10px;
+    position: absolute;
+    top: 120px;
+    right: -80px;
+    margin: 0;
+    padding: 0;
+    transform: rotate(-0.25turn);
+    display: inline-block;
+    font-weight: 600;
 }
 
 .tab {
-  height: 25px;
+  height: 30px;
   color: white;
   font-weight: 600;
   background-color: #082d50;
@@ -242,25 +242,26 @@ main {
 
 }
 
-/* .tab p {
-      display: none;
-      font-size: 0.8rem;
-      margin-top: 5px;
-    } */
-
-/* .tab-container:hover .tab {
-      width: 260px;
-    }
-
-    .tab-container:hover .tab p {
-      display: block;
-    } */
-
 /* ==== FOOTER ==== */
 footer {
-  background: #e5e7eb;
+  background: #082d50;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  color: #555;
+  color: #ffffff;
+}
+
+.hand-inside {
+    position: absolute;
+    top: 15px;        /* Ajustable */
+    right: -20px;     /* Ajustable */
+    width: 20px;
+    height: 20px;
+    opacity: 0.85;
+    animation: bounce 1.2s infinite ease-in-out; /* Opcional */
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
 }
