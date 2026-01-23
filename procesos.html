@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Repertorio de Documentos</title>
+  <meta name="description" content="Repertorio de documentos: procesos, protocolos y procedimientos con vista y descarga." />
+  <link rel="stylesheet" href="procesos.css" />
+</head>
+
+<body>
+    <header>
+        <img src="Logo Blanco copy 6-1 2.png" alt="Delihealths Logo">
+        <h1>Repertorio de Documentos</h1>
+        <p>Procesos · Protocolos · Procedimientos</p>
+    </header>
+
+  <main class="container">
+    <section class="panel">
+      <div class="panel__row">
+        <div class="field">
+          <label for="q">Buscar</label>
+          <input id="q" type="search" placeholder="Ej. Proceso de Destrucción de Datos" autocomplete="off" />
+        </div>
+
+        <div class="field">
+          <label for="area">Área</label>
+          <select id="area">
+            <option value="">Todas</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="tipo">Tipo</label>
+          <select id="tipo">
+            <option value="">Todos</option>
+            <option value="Proceso">Proceso</option>
+            <option value="Procedimiento">Procedimiento</option>
+            <option value="Protocolo">Protocolo</option>
+            <option value="Política">Política</option>
+            <option value="Formato">Formato</option>
+            <option value="Anexo">Anexo</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="compartible">Compartición</label>
+          <select id="compartible">
+            <option value="">Todos</option>
+            <option value="true">Compartible</option>
+            <option value="false">Uso interno</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="panel__row panel__row--meta">
+        <div class="meta">
+          <span id="count">0</span> documentos
+        </div>
+        <div class="meta meta--right">
+          <button class="btn btn--ghost" id="clearFilters" type="button">Limpiar filtros</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="tablewrap" aria-label="Listado de documentos">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Documento</th>
+            <th>Área</th>
+            <th>Tipo</th>
+            <th>Versión</th>
+            <th>Clasificación</th>
+            <th>Actualización</th>
+            <th class="th-actions">Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="rows">
+          <!-- JS inserta filas aquí -->
+        </tbody>
+      </table>
+    </section>
+
+    <section class="empty" id="empty" hidden>
+      <div class="empty__card">
+        <div class="empty__title">Sin resultados</div>
+        <div class="empty__text">Prueba ajustando la búsqueda o quitando filtros.</div>
+      </div>
+    </section>
+
+    <section class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Vista previa">
+      <div class="modal__backdrop" data-close="1"></div>
+      <div class="modal__content" role="document">
+        <div class="modal__header">
+          <div>
+            <div class="modal__title" id="modalTitle">Vista previa</div>
+            <div class="modal__subtitle" id="modalSub"></div>
+          </div>
+          <button class="btn btn--ghost" id="closeModal" type="button">Cerrar</button>
+        </div>
+
+        <div class="modal__body" id="preview">
+          <!-- JS: embed/iframe -->
+        </div>
+
+        <div class="modal__footer">
+          <a class="btn" id="modalDownload" href="#" download>Descargar</a>
+          <a class="btn btn--ghost" id="modalOpen" href="#" target="_blank" rel="noopener">Abrir en otra pestaña</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer>
+        © 2025 Delihealths — Todos los derechos reservados
+    </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
